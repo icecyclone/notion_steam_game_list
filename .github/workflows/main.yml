@@ -21,7 +21,7 @@ jobs:
       - name: install python packages
         run: |
           python -m pip install --upgrade pip
-          python http://main.py --debug
+          pip install -r requirements.txt
 
       - name: update notion games
         env:
@@ -39,4 +39,4 @@ jobs:
           #set to 'true' by default
           enable_filter: ${{secrets.enable_filter}}
           #set to 'false' by default
-        run: python main.py
+        python http://main.py --debug
